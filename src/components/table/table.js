@@ -27,7 +27,6 @@ export default class Table extends PureComponent {
 		console.log(this.state.posts)
 		// if (this.state.posts) {
 		return (
-			<div>
 				<ReactTable
 					// data={ columns }
 					data={this.state.posts}
@@ -46,29 +45,30 @@ export default class Table extends PureComponent {
 						}, {
 							Header: 'low',
 							id: "low",
-							accessor:  d => d[`4. low'`]
+							accessor:  d => d[`3. low'`]
 						}, {
 							Header: 'close',
-							accessor: '3. close'
+							id: 'close',
+							accessor: d => d[`4. close`]
 						}, {
 							Header: 'adjusted close',
-							accessor: '4. adjusted close'
+							id: 'adjusted close',
+							accessor: d => d[`5. adjusted close`]
 						}, {
 							Header: 'volume',
-							accessor: '5. volume'
-						}, {
-							Header: 'adjusted close',
-							accessor: '6. adjusted close'
+							id: 'volume',
+							accessor: d => d[`6. volume`]
 						}, {
 							Header: 'dividend amount',
-							accessor: '7. dividend amount'
+							id: 'dividend amount',
+							accessor: d => d[`7. dividend amount`]
 						}, {
 							Header: 'split coefficient',
-							accessor: '8. split coefficient'
+							id: 'split coefficient',
+							accessor: d => d[`8. split coefficient`]
 						}]
 					}
 				/>
-			</div>
 		)
 
 	}

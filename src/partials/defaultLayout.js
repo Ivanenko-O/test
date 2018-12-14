@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import Loadable from 'react-loadable';
+import Header from './header';
 import Navigation from './navigation';
+
 
 
 const Loading = () => <div>Loading...</div>
@@ -19,15 +21,9 @@ export default class DefaultLayout extends Component {
 
 	render() {		
 		return (
-			<Fragment> 
-				 <Navigation />
-
-				 {/* <Switch>
-					<Route path='/graph' name="graph" component = {Graph} />
-					<Route path='/table' name="table" component = {Table} />
-				</Switch>  */}
-
-				
+			<Fragment>
+				<Header />
+				<Navigation />
 			</Fragment>
 		)
 	}

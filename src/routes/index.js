@@ -3,7 +3,6 @@ import React, { Component, Fragment } from 'react';
 import Loadable from 'react-loadable';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import '../assets/style/app.css';
-import Header from '../partials/header';
 
 
 const Loading = () => <div>Loading...</div>
@@ -40,13 +39,10 @@ class Routes extends Component {
 
 	render() {
 		return (
-			<Fragment>
-				<Header />
-				<Switch>
-					<Route path='/graph' name="graph" component={Graph} />
-					<Route path='/table' name="table" component={Table} />
-				</Switch>
-			</Fragment >
+			<Switch>
+				<Route path='/graph' name="graph" component={Graph} />
+				<Route path='/table' name="table" component={Table} />
+			</Switch>
 		)
 	}
 }
