@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import Loadable from 'react-loadable';
-import Header from './header';
-import Navigation from './navigation';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import Header from '../partials/header';
+import Navigation from '../partials/navigation';
+
 
 
 
@@ -19,11 +21,19 @@ const Table = Loadable({
 
 export default class DefaultLayout extends Component {
 
-	render() {		
+	render() {
 		return (
 			<Fragment>
 				<Header />
 				<Navigation />
+
+				<div>
+					<Switch>
+						<Route path='/graph' name="graph" component={Graph} />
+						<Route path='/table' name="table" component={Table} />
+						<Redirect to='/table' />
+					</Switch>
+				</div>
 			</Fragment>
 		)
 	}

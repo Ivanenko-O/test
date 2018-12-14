@@ -5,11 +5,11 @@ import 'react-table/react-table.css';
 import { getData } from '../../helpers/fetch';
 
 
-export default class Table extends PureComponent {
 
+export default class Table extends PureComponent {
 	static contextTypes = {
 		api: PropTypes.string.isRequired,
-	};
+	}
 
 	state = {
 		posts: [],
