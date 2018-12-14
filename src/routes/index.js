@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Loadable from 'react-loadable';
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
 import '../assets/style/app.css';
 
 
@@ -42,6 +42,7 @@ class Routes extends Component {
 			<Switch>
 				<Route path='/graph' name="graph" component={Graph} />
 				<Route path='/table' name="table" component={Table} />
+				<Redirect to = '/table' />
 			</Switch>
 		)
 	}

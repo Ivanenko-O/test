@@ -27,6 +27,7 @@ export default class Table extends PureComponent {
 		console.log(this.state.posts)
 		// if (this.state.posts) {
 		return (
+			<div className="container">
 				<ReactTable
 					// data={ columns }
 					data={this.state.posts}
@@ -45,7 +46,7 @@ export default class Table extends PureComponent {
 						}, {
 							Header: 'low',
 							id: "low",
-							accessor:  d => d[`3. low'`]
+							accessor:  d => d[`3. low`]
 						}, {
 							Header: 'close',
 							id: 'close',
@@ -69,6 +70,7 @@ export default class Table extends PureComponent {
 						}]
 					}
 				/>
+				</div>
 		)
 
 	}
