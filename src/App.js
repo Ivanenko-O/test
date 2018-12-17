@@ -1,7 +1,7 @@
 
-import PropTypes from 'prop-types';
-import React, { Component } from 'react';
-import DefaultLayout from './layout/defaultLayout';
+import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import DefaultLayout from './layout/defaultLayout'
 
 const options = {
 	api: `https://www.alphavantage.co/query?apikey=demo&function=TIME_SERIES_DAILY_ADJUSTED&symbol=MSFT`,

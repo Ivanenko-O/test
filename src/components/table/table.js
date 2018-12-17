@@ -1,11 +1,8 @@
-import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
-import ReactTable from 'react-table';
-import 'react-table/react-table.css';
-import { getData } from '../../helpers/fetch';
-
-
-
+import PropTypes from 'prop-types'
+import React, { PureComponent } from 'react'
+import ReactTable from 'react-table'
+import 'react-table/react-table.css'
+import { getData } from '../../helpers/fetch'
 export default class Table extends PureComponent {
 	static contextTypes = {
 		api: PropTypes.string.isRequired,
@@ -23,13 +20,9 @@ export default class Table extends PureComponent {
 	}
 
 	render() {
-
-		console.log(this.state.posts)
-		// if (this.state.posts) {
 		return (
-			<div className="container">
+			<div className="container mt-3">
 				<ReactTable
-					// data={ columns }
 					data={this.state.posts}
 					columns={
 						[{
@@ -38,35 +31,35 @@ export default class Table extends PureComponent {
 						}, {
 							Header: 'Open',
 							id: "Open",
-                  			accessor: d => d[`1. open`]
+                  			accessor: 'open'
 						}, {
 							Header: 'high',
 							id: 'high',
-							accessor:  d => d[`2. high`]
+							accessor:  'high'
 						}, {
 							Header: 'low',
 							id: "low",
-							accessor:  d => d[`3. low`]
+							accessor:  'low'
 						}, {
 							Header: 'close',
 							id: 'close',
-							accessor: d => d[`4. close`]
+							accessor: 'close'
 						}, {
 							Header: 'adjusted close',
 							id: 'adjusted close',
-							accessor: d => d[`5. adjusted close`]
+							accessor: 'adjusted close'
 						}, {
 							Header: 'volume',
 							id: 'volume',
-							accessor: d => d[`6. volume`]
+							accessor: 'volume'
 						}, {
 							Header: 'dividend amount',
 							id: 'dividend amount',
-							accessor: d => d[`7. dividend amount`]
+							accessor: 'dividend amount'
 						}, {
 							Header: 'split coefficient',
 							id: 'split coefficient',
-							accessor: d => d[`8. split coefficient`]
+							accessor: 'split coefficient'
 						}]
 					}
 				/>
