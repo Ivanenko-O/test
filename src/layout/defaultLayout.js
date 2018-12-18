@@ -35,6 +35,7 @@ export default class DefaultLayout extends PureComponent {
 
 				<div>
 					<Switch>
+						<Route path='/' exact component={Table} />
 						<Route path='/graph' name="graph" render={() => <Graph searchValue={this.state.searchValue} />}  />
 						<Route path='/table' name="table" component={Table} />
 						<Redirect to='/table' />
