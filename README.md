@@ -16,4 +16,3 @@ You should create an api key for yourself.
 
 ## 5) When showing the Table element, you should pull the same data as in (4) and display it in a table format.
 
-## 6) Extra credit for caching previous request and not reading them again from the backend.
